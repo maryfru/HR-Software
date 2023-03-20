@@ -7,7 +7,7 @@ HR-Software with heart, we put people first!
 - [Mary-Ann Johanna Frunzete](https://github.com/maryfru)
 
 ## TODO:
-- [ ] create user login window
+- [x] create user login window
 - [ ] generate punch in/out input (nice to have: current time display)
 - [ ] user vacation timeline planner template (nice to have: showing how many days still left and already taken)
 - [ ] nice to have: possibility for user to customize page color layout
