@@ -7,7 +7,33 @@
     <title>AMM - Human Resources Management System</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <header>
+    <img src="img/logo.png" alt="AMM-HR Logo" height="280px" />
+    <span>Please login with Username: ### and Password: ###</span>
+  </header>
   <body>
+    <div id="layout">
+      <div class="container">
+        <form action="#" id="form" class="form">
+          <h2>AMM HR - Login</h2>
+          <div class="form-control-checkbox">
+            <input type="checkbox" id="chkWindowsAuthentication" />
+            <label for="chkWindowsAuthentication">Windows authentication</label>
+          </div>
+          <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" />
+            <small>Error message</small>
+          </div>
+          <button type="submit">Log in</button>
+        </form>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  accent-color: var(--major-color);
+  --success-color: #57cc99;
+  --error-color: #ff0a54;
+  --major-color: #e85d04;
+  --text-color: #001524;
+}
+
+body {
+  background-color: #edede9;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h2 {
+  color: var(--major-color);
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+input::placeholder {
+  color: var(--major-color);
+}
+
+/* ---------- ID`s ---------- */
+#layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+/* ---------- Classes ---------- */
+.container {
+  background-color: #f5ebe0;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control-checkbox {
+  color: var(--text-color);
+  margin: 20px 0 10px 0;
+}
+
+.form-control-checkbox input {
+  cursor: pointer;
+}
+
+.form-control {
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.form-control label {
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 1px solid var(--major-color);
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: var(--major-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  visibility: hidden;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: var(--major-color);
+  border: 2px solid var(--major-color);
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* ---------- Display dynamic using javascript ---------- */
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control.error small {
+  visibility: visible;
+}
