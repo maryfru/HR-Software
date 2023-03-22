@@ -9,7 +9,10 @@
   </head>
   <header>
     <img src="img/logo.png" alt="AMM-HR Logo" height="280px" />
-    <span>Please login with Username: ### and Password: ###</span>
+    <div>
+      Please login with Username: <strong>testUser123</strong> and Password:
+      <strong>test@Test1.5</strong>
+    </div>
   </header>
   <body>
     <div id="layout">
@@ -17,7 +20,11 @@
         <form action="#" id="form" class="form">
           <h2>AMM HR - Login</h2>
           <div class="form-control-checkbox">
-            <input type="checkbox" id="chkWindowsAuthentication" />
+            <input
+              type="checkbox"
+              id="chkWindowsAuthentication"
+              onclick="populateFields()"
+            />
             <label for="chkWindowsAuthentication">Windows authentication</label>
           </div>
           <div class="form-control">

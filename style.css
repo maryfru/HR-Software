@@ -32,6 +32,10 @@ h2 {
   margin: 0 0 15px;
 }
 
+strong {
+  color: var(--error-color);
+}
+
 input::placeholder {
   color: var(--major-color);
 }
@@ -111,13 +115,13 @@ input::placeholder {
   width: 100%;
 }
 
-/* ---------- Display dynamic using javascript ---------- */
+/* ---------- Dynamic display using javascript ---------- */
 .form-control.success input {
-  border-color: var(--success-color);
+  border: 2px solid var(--success-color);
 }
 
 .form-control.error input {
-  border-color: var(--error-color);
+  border: 2px solid var(--error-color);
 }
 
 .form-control.error small {
