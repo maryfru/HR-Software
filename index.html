@@ -17,14 +17,10 @@
   <body>
     <div id="layout">
       <div class="container">
-        <form action="#" id="form" class="form">
+        <form action="" id="form" class="form">
           <h2>AMM HR - Login</h2>
           <div class="form-control-checkbox">
-            <input
-              type="checkbox"
-              id="chkWindowsAuthentication"
-              onclick="populateFields()"
-            />
+            <input type="checkbox" id="chkWindowsAuthentication" />
             <label for="chkWindowsAuthentication">Windows authentication</label>
           </div>
           <div class="form-control">
@@ -37,12 +33,12 @@
             <input type="password" id="password" placeholder="Enter password" />
             <small>Error message</small>
           </div>
-          <button type="submit">Log in</button>
+          <button type="submit" onclick="auth()">Log in</button>
         </form>
       </div>
     </div>
     <div>
-      <h6>Don't like the background color? Click the rectangle on the left</h6></h6>
+      <h6>Don't like the background color? Click the rectangle on the left</h6>
       <input type="color" id="colorInput" />
       <input
         type="button"

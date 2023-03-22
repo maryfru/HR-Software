@@ -1,5 +1,3 @@
-// Login- phase
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -35,8 +33,19 @@ function showSuccess(input) {
   formControl.className = "form-control success";
 }
 
+// Authentication to main-site
+function auth() {
+  if (username.value === "testUser123" && password.value === "test@Test1.5") {
+    window.location.assign("main.html");
+  } else {
+    alert("Invalid Credential");
+    return;
+  }
+}
+
 // Event listeners
 form.addEventListener("submit", function (e) {
+  e.preventDefault();
   if (username.value === "testUser123") {
     showSuccess(username);
   } else {
