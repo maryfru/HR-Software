@@ -6,6 +6,20 @@ const password = document.getElementById("password");
 const checkBox = document.getElementById("chkWindowsAuthentication");
 
 // Populate Fields with checkBox
+function populateFields() {
+  if (checkBox.checked) {
+    username.value = "testUser123";
+    password.value = "test@Test1.5";
+  } else {
+    clearFields();
+  }
+}
+
+// Clear fields when checkBox is unchecked
+function clearFields() {
+  username.value = "";
+  password.value = "";
+}
 
 // Show input error message
 function showError(input, message) {
@@ -37,6 +51,15 @@ form.addEventListener("submit", function (e) {
     showError(password, "Please enter a valid Password");
   }
 });
+
+checkBox.addEventListener("change", function () {
+  if (this.checked) {
+    populateFields();
+  } else {
+    clearFields();
+  }
+});
+
 //the option to change the background color
 function changeColor() {
   let color = document.getElementById("colorInput").value;
