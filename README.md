@@ -14,3 +14,4 @@ https://maryfru.github.io/HR-Software/
 - [ ] generate punch in/out input (nice to have: current time display)
 - [ ] user vacation timeline planner template (nice to have: showing how many days still left and already taken)
 - [ ] nice to have: possibility for user to customize page color layout
+- [ ] in discussion to update login to manager-login and also create manager-interface
