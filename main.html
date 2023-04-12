@@ -18,7 +18,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><button>Add Hours/Vacation</button></td>
+          <td><button id="vacations">Add New Vacation</button></td>
           <td>
             <table>
               <thead>
@@ -28,25 +28,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Annual Leave</td>
-                  <td>21</td>
+                  <td>Vacation days</td>
+                  <td><output id="Vacation days"></output></td>
                   <td>Sickness Leaves</td>
-                  <td>0</td>
+                  <td><output id="Sickness Leaves"></output></td>
                   <td>Carried over</td>
-                  <td>5</td>
+                  <td><output id="Carried over"></output></td>
                 </tr>
                 <tr>
                   <td>Due</td>
-                  <td>26</td>
+                  <td><output id="Due"></output></td>
                   <td>Used</td>
-                  <td>6</td>
+                  <td><output id="Used"></output></td>
                   <td>Available</td>
-                  <td>20</td>
+                  <td><output id="Available"></output></td>
                 </tr>
               </tbody>
             </table>
           </td>
-          <td>20 of 26</td>
+          <td id="Employee info">User info</td>
         </tr>
       </tbody>
     </table>
@@ -54,26 +54,26 @@
     <table>
       <thead>
         <tr>
-          <th>Add New Shift</th>
+          <td>Edit row 🖊</td>
           <th>Type</th>
           <th>Start date</th>
           <th>End date</th>
           <th>Days</th>
           <th>Status</th>
           <th>Comment</th>
-          <th>Delete</th>
+          <td>Delete row ❌</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Edit</td>
-          <td>Shift 2</td>
+          <td><button id="edit-button">🖊</button></td>
+          <td>Leave type</td>
           <td>07.03.2023</td>
           <td>09.03.2023</td>
           <td>3</td>
           <td>Approved</td>
           <td>-</td>
-          <td>X</td>
+          <td><button id="delete-button">❌</button></td>
         </tr>
       </tbody>
     </table>
@@ -81,7 +81,9 @@
     <table>
       <thead>
         <tr>
-          <th colspan="2">Add new hours</th>
+          <th colspan="2">
+            <button id="add row">➕</button>&nbsp;&nbsp;Add new row
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -108,11 +110,8 @@
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="2">Actions</td>
-        </tr>
-        <tr>
-          <td><button>Register</button></td>
-          <td><button>Cancel</button></td>
+          <td><button id="submit">Register change</button></td>
+          <td><button id="cancel">Cancel</button></td>
         </tr>
       </tfoot>
     </table>
