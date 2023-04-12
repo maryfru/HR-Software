@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edede9;
+  font-family: "Open Sans", sans-serif;
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  border: 2px solid red;
+}

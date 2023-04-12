@@ -10,6 +10,113 @@
   <body>
     <h1>Under Maintenance</h1>
 
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Hours to account</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><button>Add Hours/Vacation</button></td>
+          <td>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="6">Summary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Annual Leave</td>
+                  <td>21</td>
+                  <td>Sickness Leaves</td>
+                  <td>0</td>
+                  <td>Carried over</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Due</td>
+                  <td>26</td>
+                  <td>Used</td>
+                  <td>6</td>
+                  <td>Available</td>
+                  <td>20</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>20 of 26</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Add New Shift</th>
+          <th>Type</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Days</th>
+          <th>Status</th>
+          <th>Comment</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Edit</td>
+          <td>Shift 2</td>
+          <td>07.03.2023</td>
+          <td>09.03.2023</td>
+          <td>3</td>
+          <td>Approved</td>
+          <td>-</td>
+          <td>X</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Add new hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leave Type</td>
+          <td>
+            <select name="shifts" id="shifts">
+              <option value="shift1">Shift One</option>
+              <option value="shift2">Shift Two</option>
+              <option value="shift3">Shift Three</option>
+              <option value="vacation">Vacation</option>
+              <option value="sickLeave">Sick Leave</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Start date</td>
+          <td><input type="date" name="startDate" id="startDate" /></td>
+        </tr>
+        <tr>
+          <td>End date</td>
+          <td><input type="date" name="endDate" id="endDate" /></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Actions</td>
+        </tr>
+        <tr>
+          <td><button>Register</button></td>
+          <td><button>Cancel</button></td>
+        </tr>
+      </tfoot>
+    </table>
+
     <script src="main.js"></script>
   </body>
 </html>
