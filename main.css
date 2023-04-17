@@ -2,12 +2,20 @@
 
 /* ---------- Global ---------- */
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 body {
   background-color: #edede9;
   font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 table {
@@ -18,4 +26,65 @@ td,
 th {
   text-align: center;
   border: 2px solid red;
+}
+
+/* ---------- Header ---------- */
+.headerContainer {
+  background: url("img/hrBanner.jpg") no-repeat center right;
+  background-size: cover;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 10px 2fr 10px;
+  grid-template-rows: 0.5fr 1fr 20px;
+  grid-gap: 20px;
+}
+
+.headerContainer img {
+  margin: auto;
+  padding-top: 1rem;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.headerContainer article {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.headerContainer h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.headerContainer span {
+  color: #ffc857;
+  text-transform: uppercase;
+}
+
+/* ---------- Media Query, (min-width: 700px) ---------- */
+@media screen and (min-width: 700px) {
+  /* ---------- Large screen rules ---------- */
+  header.headerContainer {
+    background: url(img/hrBanner.jpg) no-repeat center left;
+    background-size: cover;
+    text-align: left;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.25fr 1fr 0.25fr;
+    align-items: center;
+  }
+
+  .headerContainer img {
+    margin: 0 0 0 auto;
+    grid-row: 2 / 3;
+  }
+
+  .headerContainer article {
+    max-width: 1000px;
+    grid-column: 3 / 6;
+  }
+}
+/* ---------- Media Query, (min-width: 1000px) ---------- */
+@media screen and (min-width: 1000px) {
 }
