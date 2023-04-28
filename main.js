@@ -8,6 +8,7 @@ const typeInput = document.querySelector("#shifts");
 const startDateInput = document.querySelector("#start-date");
 const endDateInput = document.querySelector("#end-date");
 const submitBtn = document.querySelector("#submit");
+const logoutBtn = document.querySelector(".logout");
 
 // Fetch data from Node API and populate table
 fetch("api/shifts")
@@ -28,6 +29,11 @@ fetch("api/shifts")
     });
   })
   .catch((error) => console.error(error));
+
+// Logout button
+logoutBtn.addEventListener("click", () => {
+  window.location.replace("index.html");
+});
 
 // Add new shift
 addRowBtn.addEventListener("click", () => {
