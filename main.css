@@ -208,6 +208,16 @@ nav .logout:hover {
   color: #001d3d;
 }
 
+/* ---------- Page`s Layout ---------- */
+.page {
+  display: none;
+  border-radius: 0.8rem;
+  border: 2px solid #e0dfdc;
+  background-color: #fff;
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
+}
+
 /* ---------- Media Query, (min-width: 700px) ---------- */
 @media screen and (min-width: 700px) {
   /* ---------- Header, Large screen rules ---------- */
