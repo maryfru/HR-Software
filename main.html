@@ -120,14 +120,52 @@
             <tr>
               <td><button id="edit-button">🖊</button></td>
               <td>Leave type</td>
-              <td>07.03.2023</td>
-              <td>09.03.2023</td>
-              <td>3</td>
-              <td>Approved</td>
+              <td>Date</td>
+              <td>Date</td>
+              <td>Number</td>
+              <td>Approved/Not approved</td>
               <td>-</td>
               <td><button id="delete-button">❌</button></td>
             </tr>
           </tbody>
+        </table>
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">
+                <button id="add row">➕</button>&nbsp;&nbsp;Add new row
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Leave Type</td>
+              <td>
+                <select name="shifts" id="shifts">
+                  <option value="shift1">Shift One</option>
+                  <option value="shift2">Shift Two</option>
+                  <option value="shift3">Shift Three</option>
+                  <option value="vacation">Vacation</option>
+                  <option value="sickLeave">Sick Leave</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Start date</td>
+              <td><input type="date" name="startDate" id="startDate" /></td>
+            </tr>
+            <tr>
+              <td>End date</td>
+              <td><input type="date" name="endDate" id="endDate" /></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><button id="submit">Register change</button></td>
+              <td><button id="cancel">Cancel</button></td>
+            </tr>
+          </tfoot>
         </table>
 
         <table>
