@@ -25,7 +25,29 @@ table {
 td,
 th {
   text-align: center;
-  border: 2px solid red;
+  border: 2px solid rgb(195, 182, 182);
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+}
+
+#punch-out,
+#bye {
+  display: none;
+}
+
+.btn-default {
+  color: #bcbcbc;
+}
+
+.fa-undo,
+.fa-redo {
+  margin-right: 10px;
 }
 
 /* ---------- Header ---------- */
@@ -59,7 +81,7 @@ th {
 }
 
 .headerContainer span {
-  color: #fee440;
+  color: #050502;
   text-transform: uppercase;
   text-shadow: 0 0 2px #ee9b00;
 }
