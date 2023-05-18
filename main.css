@@ -45,6 +45,12 @@ button {
   color: #bcbcbc;
 }
 
+#clockimg {
+  height: 50px;
+  margin: 1px;
+  margin-left: -0.5rem;
+}
+
 .fa-undo,
 .fa-redo {
   margin-right: 10px;
