@@ -4,7 +4,7 @@ HR-Software with heart, we put people first!
 
 ## Team-members 😎
 
-- [Alexandra Gabriela Dan](https://github.com/aled1211)
+- [Alexandra Gabriela Dan](https://github.com/alehttd)
 - [Bodea Mihai Cristian](https://github.com/Michael-ZE)
 - [Mary-Ann Johanna Frunzete](https://github.com/maryfru)
 
