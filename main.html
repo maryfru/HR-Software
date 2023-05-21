@@ -216,65 +216,91 @@
     <script src="main.js"></script>
   </body>
   <footer>
-    <div class="punch">
-      <h1>
-        punch<i class="fas fa-user-clock">
-          <img id="clockimg" src="clock.png" /></i
-        >time
-      </h1>
-
-      <div class="row col-12">
-        <div id="buttons" class="col-6">
-          <button id="punch" class="btn btn-success col-12">
-            <div id="now">
-              <span id="date">17/05/2023</span><br /><span id="time"
-                >8:00am</span
-              >
-            </div>
-            <div id="punch-in">
-              <i class="fas fa-angle-right"></i>
-              <i class="fas fa-clock"></i>
-              <div>Punch In</div>
-            </div>
-            <div id="punch-out">
-              <i class="fas fa-clock"></i>
-              <i class="fas fa-angle-right"></i>
-              <div>Punch Out</div>
-            </div>
-            <div id="bye">
-              <i class="fas fa-clock"></i>
-              <div>Bye!</div>
-            </div>
-          </button>
-          <button id="undo" class="btn btn-default col-12">
-            <i class="fas fa-undo"></i>Undo Last Punch
-          </button>
-          <button id="reset" class="btn btn-warning col-12">
-            <i class="fas fa-redo"></i>Reset
+    <link rel="stylesheet" href="styleclock.css" />
+    <body onload="updateTime(); setInterval('updateTime()', 1)">
+      <!-- fancy buttons to punch in, lunch start, lunch end, punch out -->
+      <div class="btn-container">
+        <div>
+          <button type="button" class="punch-in btn" data-name="Punch In">
+            PUNCH IN
           </button>
         </div>
-
-        <div id="display" class="col-6">
-          <table class="col-12">
-            <tr>
-              <th>Start Shift</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Lunch Out</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Lunch In</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>End Shift</th>
-              <td></td>
-            </tr>
-          </table>
+        <div>
+          <button type="button" class="lunch-in btn" data-name="Lunch In">
+            START LUNCH
+          </button>
+        </div>
+        <div>
+          <button type="button" class="lunch-out btn" data-name="Lunch Out">
+            END LUNCH
+          </button>
+        </div>
+        <div>
+          <button type="button" class="punch-out btn" data-name="Punch Out">
+            PUNCH OUT
+          </button>
         </div>
       </div>
-    </div>
+      <!-- disply date and time for each -->
+      <div class="wrapper">
+        <div class="table punchin">
+          <div class="row header">
+            <div class="cell">Punch In</div>
+            <div class="cell">Time</div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <input type="text" value="..." readonly />
+            </div>
+            <div class="cell">
+              <input type="text" value="..." readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="table lunchin">
+          <div class="row header alt">
+            <div class="cell">Start Lunch</div>
+            <div class="cell">Time</div>
+          </div>
+          <div class="row">
+            <div class="cell">...</div>
+            <div class="cell">...</div>
+          </div>
+        </div>
+
+        <div class="table lunchout">
+          <div class="row header">
+            <div class="cell">End Lunch</div>
+            <div class="cell">Time</div>
+          </div>
+          <div class="row">
+            <div class="cell">...</div>
+            <div class="cell">...</div>
+          </div>
+        </div>
+
+        <div class="table punchout">
+          <div class="row header alt">
+            <div class="cell">Punch Out</div>
+            <div class="cell">Time</div>
+          </div>
+          <div class="row">
+            <div class="cell">...</div>
+            <div class="cell">...</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls woops">
+        <div class="fa fa-undo"></div>
+        <div class="fa fa-trash"></div>
+        <div class="fa fa-floppy-o"></div>
+      </div>
+      <!-- calculate total time worked -->
+
+      <!-- store data in an object on a server -->
+
+      <script src="indexclock.js"></script>
+    </body>
   </footer>
 </html>
