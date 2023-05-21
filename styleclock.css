@@ -36,7 +36,7 @@ button {
 
 .btn {
   cursor: pointer;
-  background-color: hsla(38, 100%, 51%, 0.944);
+  background-color: hsla(38, 88%, 55%, 0.621);
 }
 
 span {
@@ -48,7 +48,7 @@ span {
 }
 
 .btn:hover {
-  background-color: hsla(30, 95%, 32%, 0.7);
+  background-color: hsla(30, 89%, 45%, 0.7);
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -107,10 +107,10 @@ body {
 .row.header {
   font-weight: 900;
   color: #ffffff;
-  background: rgb(198, 175, 61);
+  background: rgb(216, 147, 91);
 }
 .row.alt {
-  background: rgb(198, 175, 61);
+  background: rgb(216, 147, 91);
 }
 
 @media screen and (max-width: 310px) {
@@ -148,7 +148,7 @@ body {
 
 .success {
   cursor: not-allowed;
-  background-color: hsl(173, 28%, 30%);
+  background-color: hsla(37, 100%, 87%, 0.935);
 }
 
 input {
