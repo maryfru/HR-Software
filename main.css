@@ -46,9 +46,10 @@ button {
 }
 
 #clockimg {
-  height: 50px;
+  height: 40px;
   margin: 1px;
-  margin-left: -0.5rem;
+  margin-left: -0.1rem;
+  margin-top: 20px;
 }
 
 .fa-undo,
