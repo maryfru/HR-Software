@@ -62,33 +62,33 @@ function insertRow(shift) {
 }
 
 const shift1 = {
-  id: 1,
-  type: "Vacation",
-  startDate: "02/01/2023",
-  endDate: "01/07/2023",
-  days: 6,
-  status: "Approved",
-  comment: "Greece vacation" 
+   id: "os20lq1683508822763",
+    type: "Medical",
+    startdate: "03.03.2023",
+    enddate: "06.03.2023",
+    days: "4",
+    status: "Approved",
+    comment: "Thx"
 }
 
 const shift2 = {
-  id: 2, 
-  type: "Sick leave",
-  startDate: "22/02/2023",
-  endDate: "02/03/2023",
-  days: 9,
-  status: "Approved",
-  comment: "Flu" 
+    id: "2xykhk1683509301861",
+    type: "Rest",
+    startdate: "20.03.2023",
+    enddate: "26.03.2023",
+    days: "7",
+    status: "Not approved",
+    comment: "-"
 }
 
 const shift3 = {
-  id: 3,
-  type: "Unpaid leave",
-  startDate: "11/04/2023",
-  endDate: "15/04/2023",
-  days: 5,
-  status: "Not approved",
-  comment: "Visiting family"
+  id: "u22ndu1683509345761",
+    type: "Rest",
+    startdate: "11.04.2023",
+    enddate: "12.04.2023",
+    days: "2",
+    status: "Approved",
+    comment: "Ok."
 }
 
 insertRow(shift1);
