@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div id="user-punch" class="page">
+        <h2>My Schedule</h2>
+        <style>
+          body {
+            background-color: #f0a34b;
+            font-family: "Open Sans", sans-serif;
+            
+          }
+          h2 {
+            color: purple;
+            text-align: center;
+            margin: 150 0 15px;
+          }
+          table,
+          th,
+          td {
+            margin-left: 440px;
+            border: 1px solid black;
+          }
+        </style>
+            <br /><br /><br />
+            <table class="tb" id="shifts-table">
+              <thead>
+                <tr>
+                  <td>Edit</td>
+                  <th>Type</th>
+                  <th>Start date</th>
+                  <th>End date</th>
+                  <th>Days</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                  <td>Delete</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button id="edit-button">🖊</button></td>
+                  <td>Shift/Vacation</td>
+                  <td>Date</td>
+                  <td>Date</td>
+                  <td>Number</td>
+                  <td>Approved/Not approved</td>
+                  <td>-</td>
+                  <td><button id="delete-button">❌</button></td>
+                </tr>
+              </tbody>
+            </table>
+<br><br>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">
+                    <button id="add row">➕</button>&nbsp;&nbsp;Add new row
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shift/Time-off</td>
+                  <td>
+                    <select name="shifts" id="shifts">
+                      <option value="shift1">Shift One</option>
+                      <option value="shift2">Shift Two</option>
+                      <option value="shift3">Shift Three</option>
+                      <option value="vacation">Vacation</option>
+                      <option value="sickLeave">Sick Leave</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Start date</td>
+                  <td><input type="date" name="startDate" id="startDate" /></td>
+                </tr>
+                <tr>
+                  <td>End date</td>
+                  <td><input type="date" name="endDate" id="endDate" /></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td><button id="submit">Register change</button></td>
+                  <td><button id="cancel">Cancel</button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>

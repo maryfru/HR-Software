@@ -12,12 +12,12 @@
     <header class="headerContainer">
       <img src="img/logo.png" alt="amm logo" />
       <article>
-        <h1>Welcome <span>testUser123</span></h1>
+        <h1>Welcome <span>testUser123</span> !</h1>
         <p><strong>Contract type:</strong> Full-time employment contract</p>
         <p><strong>Hiring date:</strong> 03.01.2023</p>
         <p><strong>Fraction hours/day:</strong> 8h</p>
-        <p><strong>Company:</strong> FasttrackIT GmbH & Co. KG</p>
-        <p><strong>Department:</strong> DEV 1.5 AMMS EU RO</p>
+        <p><strong>Company:</strong> FasttrackIT Romania</p>
+        <p><strong>Department:</strong> Web Development/p></p>
       </article>
     </header>
     <!-- navigation -->
@@ -28,190 +28,21 @@
       <nav>
         <ul id="top-menu-bar">
           <li>
-            <a href="#userInfo" data-page="user-info">User Information</a>
+            <a href="userinfo.html" data-page="user-info">User Information</a>
           </li>
           <li>
-            <a href="#timeStamp" data-page="user-punch">User Attendance</a>
+            <a href="schedule.html" data-page="user-shifts"
+              >Change my Schedule</a
+            >
           </li>
           <li>
-            <a href="#hoursToAccount" data-page="user-shifts">Shift Schedule</a>
-          </li>
-          <li>
-            <a href="#horusToProject" data-page="user-projects"
+            <a href="projects.html" data-page="user-projects"
               >Project Tracking</a
             >
           </li>
-          <li><a href="#logout" class="logout">Logout</a></li>
+          <li><a href="index.html" class="logout">Logout</a></li>
         </ul>
       </nav>
-    </section>
-    <!-- User Information -->
-    <section>
-      <div id="user-info" class="page">
-        <h2>User Information</h2>
-        <p>UNDER MAINTENANCE</p>
-      </div>
-    </section>
-    <!-- User Attendance -->
-    <section>
-      <div id="user-punch" class="page">
-        <h2>User Attendance</h2>
-        <p>UNDER MAINTENANCE</p>
-      </div>
-    </section>
-    <section>
-      <div id="user-shifts" class="page">
-        <table>
-          <thead>
-            <tr>
-              <th colspan="3">Hours to account</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><button id="vacations">Add New Vacation</button></td>
-              <td>
-                <table>
-                  <thead>
-                    <tr>
-                      <th colspan="6">Summary</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Vacation days</td>
-                      <td><output id="Vacation days"></output></td>
-                      <td>Sickness Leaves</td>
-                      <td><output id="Sickness Leaves"></output></td>
-                      <td>Carried over</td>
-                      <td><output id="Carried over"></output></td>
-                    </tr>
-                    <tr>
-                      <td>Due</td>
-                      <td><output id="Due"></output></td>
-                      <td>Used</td>
-                      <td><output id="Used"></output></td>
-                      <td>Available</td>
-                      <td><output id="Available"></output></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-              <td id="Employee info">User info</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="tb" id="shifts-table">
-          <thead>
-            <tr>
-              <td>Edit row 🖊</td>
-              <th>Type</th>
-              <th>Start date</th>
-              <th>End date</th>
-              <th>Days</th>
-              <th>Status</th>
-              <th>Comment</th>
-              <td>Delete row ❌</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><button id="edit-button">🖊</button></td>
-              <td>Leave type</td>
-              <td>Date</td>
-              <td>Date</td>
-              <td>Number</td>
-              <td>Approved/Not approved</td>
-              <td>-</td>
-              <td><button id="delete-button">❌</button></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">
-                <button id="add row">➕</button>&nbsp;&nbsp;Add new row
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Leave Type</td>
-              <td>
-                <select name="shifts" id="shifts">
-                  <option value="shift1">Shift One</option>
-                  <option value="shift2">Shift Two</option>
-                  <option value="shift3">Shift Three</option>
-                  <option value="vacation">Vacation</option>
-                  <option value="sickLeave">Sick Leave</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>Start date</td>
-              <td><input type="date" name="startDate" id="startDate" /></td>
-            </tr>
-            <tr>
-              <td>End date</td>
-              <td><input type="date" name="endDate" id="endDate" /></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td><button id="submit">Register change</button></td>
-              <td><button id="cancel">Cancel</button></td>
-            </tr>
-          </tfoot>
-        </table>
-
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">
-                <button id="add row">➕</button>&nbsp;&nbsp;Add new row
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Leave Type</td>
-              <td>
-                <select name="shifts" id="shifts">
-                  <option value="shift1">Shift One</option>
-                  <option value="shift2">Shift Two</option>
-                  <option value="shift3">Shift Three</option>
-                  <option value="vacation">Vacation</option>
-                  <option value="sickLeave">Sick Leave</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>Start date</td>
-              <td><input type="date" name="startDate" id="startDate" /></td>
-            </tr>
-            <tr>
-              <td>End date</td>
-              <td><input type="date" name="endDate" id="endDate" /></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td><button id="submit">Register change</button></td>
-              <td><button id="cancel">Cancel</button></td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-    <!-- Project Tracking -->
-    <section>
-      <div id="user-projects" class="page">
-        <h2>Project Tracking</h2>
-        <p>UNDER MAINTENANCE</p>
-      </div>
     </section>
     <script src="main.js"></script>
   </body>
@@ -296,9 +127,7 @@
         <div class="fa fa-trash"></div>
         <div class="fa fa-floppy-o"></div>
       </div>
-      <!-- calculate total time worked -->
-
-      <!-- store data in an object on a server -->
+      <!-- Alexandra to do!-- calculate total time worked and output the result -->
 
       <script src="indexclock.js"></script>
     </body>
