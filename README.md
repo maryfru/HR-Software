@@ -1,4 +1,4 @@
-# AMM Business HR 💪🏻
+# AMM Business HR 📂
 
 - A software where you can easily keep track of your work schedule.
 - HR-Software with heart, we put people first! 😎
