@@ -1,7 +1,7 @@
 # AMM Business HR
 
-A software where you can easily keep track of your work schedule. 👨🏻‍💻👩🏼‍💻
-HR-Software with heart, we put people first! 😎
+- A software where you can easily keep track of your work schedule.
+- HR-Software with heart, we put people first! 😎
 
 ## Team-members 😎
 
@@ -14,7 +14,7 @@ https://maryfru.github.io/HR-Software/
 
 ## 🎞 Live Preview
 
-- (previews.png)
+- (/Users/ale/Desktop/HR-Software/previews.png)
 
 ## TODO:
 
