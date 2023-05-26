@@ -12,10 +12,6 @@
 
 https://maryfru.github.io/HR-Software/
 
-## 🎞 Live Preview
-
-- (/Users/ale/Desktop/HR-Software/previews.png)
-
 ## TODO:
 
 - [x] create user login window
