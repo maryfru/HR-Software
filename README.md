@@ -1,22 +1,27 @@
 # AMM Business HR
 
-HR-Software with heart, we put people first!
+A software where you can easily keep track of your work schedule. 👨🏻‍💻👩🏼‍💻
+HR-Software with heart, we put people first! 😎
 
 ## Team-members 😎
 
-- [Alexandra Gabriela Dan](https://github.com/alehttd)
-- [Bodea Mihai Cristian](https://github.com/Michael-ZE)
-- [Mary-Ann Johanna Frunzete](https://github.com/maryfru)
+- [Alexandra Gabriela Dan](https://github.com/alehttd) 👩🏼‍💻
+- [Bodea Mihai Cristian](https://github.com/Michael-ZE) 👨🏻‍💻
 
 ## Demo
 
 https://maryfru.github.io/HR-Software/
 
+## 🎞 Live Preview
+
+- (previews.png)
+
 ## TODO:
 
 - [x] create user login window
-- [ ] generate punch in/out input (nice to have: current time display)
-- [ ] user vacation timeline planner template (nice to have: showing how many days still left and already taken)
-- [ ] use node API to offer CRUD functionality
-- [ ] nice to have: possibility for user to customize page color layout
-- [ ] in discussion to update login to manager-login and also create manager-interface
+- [x] adding new tabs (buttons) through which the employee can organize his time - user information, change his schedule and projects tracking
+- [x] generate punch in/out input (nice to have: current time display)
+- [x] use node API to offer CRUD functionality
+- [x] optional - possibility for user to customize page color layout
+- [x] add logout button
+- [ ] customizing the User info page
