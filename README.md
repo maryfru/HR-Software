@@ -1,14 +1,14 @@
-# AMM Business HR
+# AMM Business HR 💪🏻
 
 - A software where you can easily keep track of your work schedule.
 - HR-Software with heart, we put people first! 😎
 
-## Team-members 😎
+## 😎 Team-members
 
 - [Alexandra Gabriela Dan](https://github.com/alehttd) 👩🏼‍💻
 - [Bodea Mihai Cristian](https://github.com/Michael-ZE) 👨🏻‍💻
 
-## Demo
+## 👀 Demo
 
 https://maryfru.github.io/HR-Software/
 
@@ -18,7 +18,7 @@ https://maryfru.github.io/HR-Software/
 
 <img width="700" alt="previews" src="https://github.com/maryfru/HR-Software/assets/127441132/19d96275-7c33-4807-9f31-dbe66ccbfcf7">
 
-## TODO:
+## ✍🏻 TODO:
 
 - [x] create user login window
 - [x] adding new tabs (buttons) through which the employee can organize his time - user information, change his schedule and projects tracking
