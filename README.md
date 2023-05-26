@@ -12,6 +12,12 @@
 
 https://maryfru.github.io/HR-Software/
 
+## 📸 Live preview
+
+<img width="480" alt="preview" src="https://github.com/maryfru/HR-Software/assets/127441132/0980f8f1-f9c5-4ff2-8696-197d3da4125c">
+
+<img width="700" alt="previews" src="https://github.com/maryfru/HR-Software/assets/127441132/19d96275-7c33-4807-9f31-dbe66ccbfcf7">
+
 ## TODO:
 
 - [x] create user login window
