@@ -1,13 +1,37 @@
 const addRowBtn = document.querySelector("#add row");
 const cancelBtn = document.querySelector("#cancel");
-const typeInput = document.querySelector("#shifts");
-const startDateInput = document.querySelector("#startDate");
-const endDateInput = document.querySelector("#endDate");
-const submitBtn = document.querySelector("#submit");
-const body = document.querySelector("#table tbody");
+var typeInput = document.querySelector("#selectShifts");
+var startDateInput = document.querySelector("#startDate");
+var endDateInput = document.querySelector("#endDate");
+const form = document.querySelector("#editForm");
+const shiftsTable = document.querySelector("#shiftsTable");
+const table = document.getElementById("add-row-table");
+const status = document.getElementById("status");
+const comment = document.getElementById("comment");
 
+let allShifts = [];
+let editId;
+
+// Calculate days
+const startTimestamp = new Date(startDate).getTime();
+const endTimestamp = new Date(endDate).getTime();
+const days = Math.ceil((endTimestamp - startTimestamp) / (1000 * 60 * 60 * 24));
+
+// Read shift data
+function readShift() {
+  return {
+    type: document.getElementById("type").value,
+    startDate: $("#startDate").value,
+    endDate: $("#endDate").value,
+    days: $("#days").value,
+    status: $("#status").value,
+    comment: $("#comment").value,
+  };
+}
+
+// Adding elements to the form
 function insertRow(shift) {
-  body.innerHTML += `<tr>
+  shiftsTable.innerHTML += `<tr>
          <td><button class="edit-button" data-id="${shift.id}">🖊</button></td>
          <td>${shift.type}</td>
         <td>${shift.startDate}</td>
@@ -19,71 +43,60 @@ function insertRow(shift) {
        </tr>`;
 }
 
-// // Add new shift
-// addRowBtn.addEventListener("click", () => {
-//   createShiftRequest(shift);
-//   form.style.display = "block";
-// });
+//Load shifts and display them
+function displayShifts(shifts) {
+  document.querySelector("#table tbody").innerHTML = getShiftsHTML(shifts);
+}
+function loadShifts() {
+  return loadShiftsRequest().then((shifts) => {
+    allShifts = shifts;
+    displayShifts(shifts);
+    return shifts;
+  });
+}
 
+function loadShifts() {
+  return loadShiftsRequest().then((teams) => {
+    allShifts = shifts;
+    displayShifts(shifts);
+    return shifts;
+  });
+}
+
+function prepareEdit(id) {
+  const shift = allShifts.find((shift) => shift.id === id);
+  editId = id;
+  insertRow(shift);
+}
+
+//Reset id to undefined
+function initEvents() {
+  form.addEventListener("submit", onSubmit);
+  form.addEventListener("reset", () => {
+    editId = undefined;
+  });
+
+  // Deleting teams & and preparing the edit form
+  $("#editForm").addEventListener("click", async (e) => {
+    if (e.target.matches("delete-button")) {
+      const id = e.target.dataset.id;
+      const status = await deleteTeamRequest(id);
+      if (status.success) {
+        loadTeams();
+      }
+    } else if (e.target.matches("edit-button")) {
+      const id = e.target.dataset.id;
+      prepareEdit(id);
+    }
+  });
+}
+
+// Cancel button
 cancelBtn.addEventListener("click", () => {
-  form.style.display = "none";
+  typeInput.selectedIndex = 0;
+  startDateInput.value = "";
+  endDateInput.value = "";
 });
-
-// Edit or delete shift
-body.addEventListener("click", (e) => {
-  if (e.target.matches(".edit-button")) {
-    const row = e.target.closest("tr");
-    const id = e.target.getAttribute("data-id");
-    const type = table.rows[rowIndex].cells[1].textContent;
-    const startDate = table.rows[rowIndex].cells[2].textContent;
-    const endDate = table.rows[rowIndex].cells[3].textContent;
-    const days = table.rows[rowIndex].cells[4].textContent;
-    const status = table.rows[rowIndex].cells[5].textContent;
-    const comment = table.rows[rowIndex].cells[6].textContent;
-    const updatedData = {
-      type,
-      startDate,
-      endDate,
-      days,
-      status,
-      comment,
-    };
-  } else if (e.target.matches(".delete-button")) {
-    if (confirm("Are you sure you want to delete this shift?")) {
-      const row = e.target.closest("tr");
-      const id = e.target.getAttribute("data-id");
-      deleteShiftRequest(id);
-      row.remove();
-    }
-  }
-});
-
-body.addEventListener("click", (e) => {
-  if (e.target.matches(".submit-button")) {
-    if (
-      !type.value ||
-      !startDate.value ||
-      !endDate.value ||
-      !days.value ||
-      !comment.value
-    ) {
-      alert("Please fill in all fields");
-      return;
-    }
-    updateShiftRequest(id, updatedData);
-  }
-});
-
-// submitBtn.addEventListener("click", () => {
-//   const data = {
-//     type: typeInput.valueOf,
-//     startDate: startDateInput.value,
-//     endDate: endDateInput.value,
-//     days: days.value,
-//     status: status.valueOf,
-//     comment: comment.valueOf,
-//   };
-// });
 
 loadShiftsRequest().then((shifts) => {
   shifts.forEach((shift) => {

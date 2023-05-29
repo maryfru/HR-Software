@@ -26,4 +26,4 @@ https://maryfru.github.io/HR-Software/
 - [x] use node API to offer CRUD functionality
 - [x] optional - possibility for user to customize page color layout
 - [x] add logout button
-- [ ] customizing the User info page
+- [ ] TO DO: customizing the User info page with actual user information
