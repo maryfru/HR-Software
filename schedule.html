@@ -21,79 +21,74 @@
             margin: 150 0 15px;
           }
           #shiftsTable,
-          th,
           td {
-            margin-left: 440px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align:center;
+            padding: 4px 3px;
             border: 1.5px solid black;}
-          #add-row-table {
-            margin-left: 440px;
-          }  
+          th {
+            font-weight: bolder;
+            padding: 5px 0px;
+          }
         </style>
             <br /><br /><br />
           <form id="editForm" action="" method="POST"></form>
             <table id="shiftsTable">
               <thead>
                 <tr>
-                  <th id= "edit">Edit</th>
-                  <th id= "type">Type</th>
-                  <th >Start date</th>
-                  <th >End date</th>
-                  <th id= "days">Days</th>
-                  <th id= "status">Status</th>
-                  <th id= "comment">Comment</th>
-                  <td id= "delete">Delete</td>
+                  <th>Add</th>
+                  <th>Type</th>
+                  <th>Start date</tg>
+                  <th>End date</th>
+                  <th>Days</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                  <th>Delete</th>
+                  <th>Edit</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><button id="edit-button">🖊</button></td>
-                  <td>Shift/Vacation</td>
-                  <td>Date</td>
-                  <td>Date</td>
-                  <td>Number</td>
-                  <td>Approved/Not approved</td>
-                  <td>-</td>
-                  <td><button id="delete-button">❌</button></td>
-                </tr>
-              </tbody>
-            </table>
-    </form>
-<br><br><br>
-            <table id="add-row-table">
-              <thead>
-                <tr>
-                  <th colspan="2">
-                    <button type="submit" id="add row">➕</button>&nbsp;&nbsp;Add new row
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Shift/Time-off</td>
                   <td>
-                    <select id="selectShifts">
+                  <button type="submit" id="add row">➕</button>
+                  </td>
+                  <td><strong>Shift/Vacation</strong></td>
+                  <td><strong>Date</strong></td>
+                  <td><strong>Date</strong></td>
+                  <td><strong>Number</strong></td>
+                  <td><strong>Approved/Not approved</strong></td>
+                  <td><strong>Manager feeback</strong></td>
+                  <td><button class = "delete-button" id="delete-button">❌</button></td>
+                  <td><button class = "edit-button" id="edit-button">🖊</button></td>
+                </tr>
+                <tr>
+                  <td>NA</td><td>Sick Leave</td><td>01/03/2023</td><td>02/28/2023</td><td>67</td><td>Approved</td><td>Get well soon!</td><td>NA</td><td>NA</td>
+                </tr>
+                <tr>
+                <td>
+                    <button type="submit" id="add row">➕</button>
+                <td>
+                  <select id="selectShifts">
                       <option value="shift1">Shift One</option>
                       <option value="shift2">Shift Two</option>
                       <option value="shift3">Shift Three</option>
                       <option value="vacation">Vacation</option>
                       <option value="sickLeave">Sick Leave</option>
                     </select>
-                  </td>
+                </td>
+                <td><input type="date" name="startDate" id="startDate" /></td>
+                <td><input type="date" name="endDate" id="endDate" /></td>
+                <td><input type="text" id="days"></td>
+                <td></td>
+                <td></td>
+                <td><button class = "delete-button" id="delete-button">❌</button></td>
+                <td><button class = "edit-button" id="edit-button">🖊</button></td>
                 </tr>
                 <tr>
-                  <td>Start date</td>
-                  <td><input type="date" name="startDate" id="startDate" /></td>
-                </tr>
-                <tr>
-                  <td>End date</td>
-                  <td><input type="date" name="endDate" id="endDate" /></td>
+                <td><button type="reset" style="color:red;text-align:center;" id="cancel">Cancel</button></td>
                 </tr>
               </tbody>
-              <tfoot>
-                <tr>
-                  <td><button type="reset" style="color:red;text-align:center;margin-left: 20%;" id="cancel">Cancel</button></td>
-                </tr>
-              </tfoot>
             </table>
           </div>
       </div>

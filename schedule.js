@@ -5,10 +5,6 @@ var startDateInput = document.querySelector("#startDate");
 var endDateInput = document.querySelector("#endDate");
 const form = document.querySelector("#editForm");
 const shiftsTable = document.querySelector("#shiftsTable");
-const table = document.getElementById("add-row-table");
-const status = document.getElementById("status");
-const comment = document.getElementById("comment");
-
 let allShifts = [];
 let editId;
 
@@ -16,16 +12,17 @@ let editId;
 const startTimestamp = new Date(startDate).getTime();
 const endTimestamp = new Date(endDate).getTime();
 const days = Math.ceil((endTimestamp - startTimestamp) / (1000 * 60 * 60 * 24));
+document.getElementById("days").value = days;
 
 // Read shift data
-function readShift() {
+function readShifts() {
   return {
     type: document.getElementById("type").value,
     startDate: $("#startDate").value,
     endDate: $("#endDate").value,
     days: $("#days").value,
-    status: $("#status").value,
-    comment: $("#comment").value,
+    status: $("").value,
+    comment: $("").value,
   };
 }
 
@@ -43,9 +40,47 @@ function insertRow(shift) {
        </tr>`;
 }
 
+//Creating a new team or editing an existing team based on form submission
+async function onSubmit(e) {
+  e.preventDefault();
+  const shift = readShifts();
+  let status = { success: false };
+  if (editId) {
+    shift.id = editId;
+    status = await updateShiftRequest(shift);
+    if (status.success) {
+      allShifts = allShifts.map((t) => {
+        if (s.id === shift.id) {
+          return {
+            ...s,
+            ...shift,
+          };
+        }
+        return s;
+      });
+    }
+  } else {
+    status = await createShiftRequest(shift);
+    if (status.success) {
+      shift.id = status.id;
+      allShifts = [...allShifts, shift];
+    }
+  }
+
+  if (status.success) {
+    displayShifts(allShifts);
+    e.target.reset();
+  }
+}
+
+// Adding a new row (shift) to the table
+addRowBtn.addEventListener("click", function () {
+  onSubmit(shift);
+});
+
 //Load shifts and display them
 function displayShifts(shifts) {
-  document.querySelector("#table tbody").innerHTML = getShiftsHTML(shifts);
+  document.querySelector("#shiftsTable").innerHTML = insertRow(shifts);
 }
 function loadShifts() {
   return loadShiftsRequest().then((shifts) => {
@@ -56,7 +91,7 @@ function loadShifts() {
 }
 
 function loadShifts() {
-  return loadShiftsRequest().then((teams) => {
+  return loadShiftsRequest().then((shifts) => {
     allShifts = shifts;
     displayShifts(shifts);
     return shifts;
@@ -77,14 +112,14 @@ function initEvents() {
   });
 
   // Deleting teams & and preparing the edit form
-  $("#editForm").addEventListener("click", async (e) => {
-    if (e.target.matches("delete-button")) {
+  form.addEventListener("click", async (e) => {
+    if (e.target.matches(".delete-button")) {
       const id = e.target.dataset.id;
       const status = await deleteTeamRequest(id);
       if (status.success) {
         loadTeams();
       }
-    } else if (e.target.matches("edit-button")) {
+    } else if (e.target.matches(".edit-button")) {
       const id = e.target.dataset.id;
       prepareEdit(id);
     }
